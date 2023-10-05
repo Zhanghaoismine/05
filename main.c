@@ -1,19 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    int sum = 0;
-    int num;
-
-    printf("input a number: ");
-    scanf("%d", &num);
-
-    int i;
-
-    for (i = 0; i <= num; i++) { 
-        sum = sum + i;
-    }
-
-    printf("result is %i\n", sum);
+	int answer=32;
+	int num;
+	int trial=0;
+	
+	do
+	{
+		printf("your answer: ");
+		scanf("%d",&num);
+		
+		if(num>32){
+			printf("too high\n");
+		}
+		else if(num<32){
+			printf("too low\n");
+		}
+		trial=trial+1;
+	} while(num!=32);
+	printf("congratulation!\n");
+	
     return 0;
 }
 
